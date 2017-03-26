@@ -13,3 +13,8 @@
     </div>
   </div>
 </div>
+<div ng-if="errors.data.message">
+  <div class="alert alert-warning">
+    <p><strong>{{ errors.data.message }}</strong></p>
+  </div>
+</div>
