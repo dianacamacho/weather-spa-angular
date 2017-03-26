@@ -2,6 +2,7 @@
   // MODULE
   var app = angular.module("app", ['ngRoute', 'ngResource']);
 
+  // ROUTES
   app.config(function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -13,4 +14,10 @@
         controller: 'forecastController'
       })
   });
+
+  // CUSTOM SERVICES
+  app.service('cityService', function() {
+    this.city = 'Chicago, IL';
+  });
+
 })()

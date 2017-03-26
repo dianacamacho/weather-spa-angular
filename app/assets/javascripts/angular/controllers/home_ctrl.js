@@ -1,6 +1,10 @@
 (function() {
-  angular.module("app").controller("homeController", ['$scope', '$log', function($scope, $log) {
+  angular.module("app").controller("homeController", ['$scope', '$log', 'cityService', function($scope, $log, cityService) {
     $log.log('home page');
-    $scope.message = 'home';
+    $scope.city = cityService.city;
+
+    $scope.$watch('city', function() {
+      cityService.city = $scope.city;
+    });
   }]);
 })()
