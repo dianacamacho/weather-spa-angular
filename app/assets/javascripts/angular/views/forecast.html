@@ -9,7 +9,7 @@
 <div ng-repeat="day in weatherResult">
   <div class="row">
     <div class="col-md-12">
-      <city-temp-data></city-temp-data>
+      <city-temp-data day-object="day" format-date="convertToDate(dayDate)" date-format="fullDate" format-temp="convertToFahrenheit(dayTemp)"></city-temp-data>
     </div>
   </div>
 </div>
