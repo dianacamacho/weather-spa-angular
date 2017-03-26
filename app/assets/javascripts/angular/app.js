@@ -13,11 +13,22 @@
         templateUrl: '/assets/angular/views/forecast.html',
         controller: 'forecastController'
       })
+      .when('/forecast/:days', {
+        templateUrl: '/assets/angular/views/forecast.html',
+        controller: 'forecastController'
+      })
   });
 
   // CUSTOM SERVICES
   app.service('cityService', function() {
     this.city = 'Chicago, IL';
+  });
+
+  // CUSTOM DIRECTIVES
+  app.directive('cityTempData', function() {
+    return {
+      templateUrl: 'assets/angular/directives/city_result.html'
+    }
   });
 
 })()
