@@ -7,7 +7,6 @@
     var cityParams = { q: $scope.city, cnt: $scope.days, appid: "da24829670b77e8c573a24a1543be0e7" };
     $scope.weatherResult = weatherService.getWeather(cityParams);
    
-
     $scope.convertToFahrenheit = function(degK) {
       var degF = Math.round(1.8 * (degK - 273.15) + 32);
       return degF.toString() + ' F';
