@@ -6,7 +6,7 @@
   <a href="#!/forecast/7" class="btn btn-sm btn-primary" ng-class="{ 'disabled': days == '7' }">7 Day Forecast</a>
 </div>
 <hr>
-<div ng-repeat="day in weatherResult">
+<div ng-repeat="day in weatherResult.list">
   <div class="row">
     <div class="col-md-12">
       <city-temp-data day-object="day" format-date="convertToDate(dayDate)" date-format="fullDate" format-temp="convertToFahrenheit(dayTemp)"></city-temp-data>
